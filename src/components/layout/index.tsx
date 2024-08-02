@@ -13,6 +13,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </main>
       <Drawer />
       <ModalProvider />
+      <footer style={{textAlign: 'center'}}>
+        <p>© {new Date().getFullYear()} All rights reserved. Copying is prohibited. The
+          code is the property of the developer. <a href="https://github.com/kraevskiy" className="text-blue" target="_blank">Illia Kraievskyi</a>.
+        </p>
+      </footer>
     </div>
   );
 };
