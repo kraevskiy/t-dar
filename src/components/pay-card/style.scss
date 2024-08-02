@@ -1,0 +1,66 @@
+@import "@/styles/mixins";
+
+.pay-card {
+  background: var(--c-dark-light);
+  border-radius: var(--radius-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 10px 8px;
+
+  &__img {
+    height: 38px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: var(--fs-10);
+    font-weight: var(--fw-800);
+
+    @include tablet() {
+      font-size: var(--fs-12);
+    }
+
+    @include desktop() {
+      font-size: var(--fs-14);
+    }
+  }
+
+  &__description {
+    font-size: var(--fs-8);
+    color: var(--c-white-opacity);
+
+    @include tablet() {
+      font-size: var(--fs-10);
+    }
+
+    @include desktop() {
+      font-size: var(--fs-12);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    background: var(--c-blue-dark);
+    border-radius: var(--radius-xs);
+    transform: translate(-50%, -50%);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-900);
+    text-transform: uppercase;
+    min-width: 78px;
+    max-width: 90%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 5px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+
+    &.error {
+      background: var(--c-red);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "@/styles/mixins";
+
+.custom-select {
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.05), -5px 0px 5px 0px rgba(0, 0, 0, 0.02);
+  background: var(--c-dark-light);
+  color: var(--c-white);
+  border-radius: var(--radius-sm);
+  .custom-select__control {
+    background: var(--c-dark-light);
+    color: var(--c-white);
+    border: none;
+    border-radius: var(--radius-sm);
+  }
+  .custom-select__menu {
+    background: var(--c-dark-light);
+    color: var(--c-white);
+    border-radius: var(--radius-sm);
+  }
+}
+
+.pay-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 7px;
+  &__img {
+    width: 36px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__name {
+    font-size: var(--fs-10);
+    font-weight: var(--fw-800);
+    color: var(--c-white);
+    @include tablet() {
+      font-size: var(--fs-14);
+    }
+  }
+
+  &__description {
+    font-size: var(--fs-6);
+    color: var(--c-white-opacity);
+    @include tablet() {
+      font-size: var(--fs-12);
+    }
+  }
+}
