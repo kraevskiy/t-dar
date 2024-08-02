@@ -13,6 +13,7 @@ export default defineConfig({
       },
     ),
   ],
+  base: '/t-dar/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
